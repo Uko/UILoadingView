@@ -6,10 +6,17 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		6DDD9BB21545D7A1003E9C54 /* UILoadingView.h */ = {isa = PBXFileReference; path = UILoadingView.h; sourceTree = "<group>"; };
+		6DDD9BB31545D7A1003E9C54 /* UILoadingView.m */ = {isa = PBXFileReference; path = UILoadingView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		6DDD9BA91545D6FF003E9C54 = {
 			isa = PBXGroup;
 			children = (
+				6DDD9BB21545D7A1003E9C54 /* UILoadingView.h */,
+				6DDD9BB31545D7A1003E9C54 /* UILoadingView.m */,
 			);
 			sourceTree = "<group>";
 		};
