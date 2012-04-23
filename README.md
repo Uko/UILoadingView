@@ -3,7 +3,7 @@ UILoadingView
 
 UILoadingView is an iOS drop-in class that displays a full-screen status indicator with a white background and a spinner with a word: "Loading…", while work is being done in a background thread. Just like the one in YouTube and iTunes native apps. Especially useful with **UITableView**s
 
-[![](http://i1078.photobucket.com/albums/w486/UkoDragon/UILoadingView/th_iOSSimulatorScreenshot232012191132.png)](http://i1078.photobucket.com/albums/w486/UkoDragon/UILoadingView/iOSSimulatorScreenshot232012191132.png)
+![loading screen](http://i1078.photobucket.com/albums/w486/UkoDragon/UILoadingView/iOSSimulatorScreenshot232012191132.png)
 
 Requirements
 ------------
@@ -22,7 +22,7 @@ The simplest way to add the UILoadingView to your project is to directly add the
 If you have a git tracked project, you can add UILoadingView as a submodule to your project. 
 
 1. Move inside your git tracked project.
-2. Add UILoadingView as a submodule using `git submodule add git://github.com/Uko/UILoadingView.git` .
+2. Add UILoadingView as a submodule using `git submodule add git://github.com/Uko/UILoadingView.git UILoadingView`.
 3. Open your project in Xcode, than drag and drop `UILoadingView.h` and `UILoadingView.m` to your classes group (in the Groups & Files view). 
 4. Don't select Copy items and select a suitable Reference type (relative to project should work fine most of the time).
 
@@ -40,6 +40,7 @@ dispatch_async(downloadQueue, ^{
     //your data loading
     dispatch_async(dispatch_get_main_queue(), ^{
         [[self.view.subviews lastObject] removeFromSuperview]; //removes the UILoadingView
+        //maybe some visual data reloading that should be run in the main thread
     });
 });
 dispatch_release(downloadQueue);
